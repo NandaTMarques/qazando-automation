@@ -1,0 +1,21 @@
+{
+  "name": "qazando-automation",
+  "version": "1.0.0",
+  "description": "Projeto de Testes Automatizados qazando",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx codeceptjs run --steps",
+    "ios": "PLATFORM=iOS APP='/Users/f.teixeira.marques/fernanda.teixeira/Fernanda/QA_PROJETOS/qazando-automation/app/qazandoapp.app' DEVICE=iPhone 11 Pro Max VERSION=13.2 npx codeceptjs run --steps",
+    "android": "PLATFORM=Android APP='/Users/f.teixeira.marques/fernanda.teixeira/Fernanda/QA_PROJETOS/qazando-automation/app/app-release.apk' DEVICE=Curso VERSION=9 PACKAGE=com.qazandoapp ACTIVITY=MainActivity npx codeceptjs run --steps"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codeceptjs": "^3.3.3",
+    "webdriverio": "^7.20.5",
+    "mochawesome": "7.1.3"
+  },
+  "devDependencies": {
+    "mocha":"10.0.0"
+  }
+}
