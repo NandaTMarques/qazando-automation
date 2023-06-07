@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx codeceptjs run --steps",
-    "ios": "PLATFORM=iOS APP='/Users/f.teixeira.marques/fernanda.teixeira/Fernanda/QA_PROJETOS/qazando-automation/app/qazandoapp.app' DEVICE=iPhone 11 Pro Max VERSION=13.2 npx codeceptjs run --steps",
-    "android": "PLATFORM=Android APP='/Users/f.teixeira.marques/fernanda.teixeira/Fernanda/QA_PROJETOS/qazando-automation/app/app-release.apk' DEVICE=Curso VERSION=9 PACKAGE=com.qazandoapp ACTIVITY=MainActivity npx codeceptjs run --steps"
+    "ios": "PLATFORM=iOS APP='/Users/fernandatmarques/qazando-automation/app/qazandoapp.app' DEVICE=iPhone 14 VERSION=16.4 npx codeceptjs run --steps",
+    "android": "PLATFORM=Android APP='/Users/fernandatmarques/qazando-automation/app/app-release.apk' DEVICE=Projeto_automation VERSION=10.0 PACKAGE=com.qazandoapp ACTIVITY=MainActivity npx codeceptjs run --steps"
   },
   "author": "",
   "license": "ISC",
