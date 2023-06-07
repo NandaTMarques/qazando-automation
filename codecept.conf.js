@@ -8,8 +8,6 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 exports.config = {
-  name: 'qazando-automation',
-  tests: './step_definitions/*_test.js',
   output: './output', 
   helpers: {
     Appium: {
@@ -40,20 +38,50 @@ exports.config = {
     },
   },
   include: {
-    I: "./steps_file.js",
-    login_page: "./pages/login_page.js",
-    home_page: "./pages/home_page.js"
+    I: './steps_file.js',
+    login_page: './pages/login_page.js',
+    home_page: './pages/home_page.js'
   },
   mocha: {},
   bootstrap: null,
+  timeout: null,
   teardown: null,
-  // hooks: [],
+  translation: 'pt-BR',
+  hooks: [],
+  gherkin: {
+    translation: 'pt-BR',
+    features: './features/*.feature',
+    steps: ['./step_definitions/steps.js']
+  },
   plugins: {
     screenshotOnFail: {
-      enabled: true,
+      enabled: true
     },
     retryFailedStep: {
-      enabled: true,
+      enabled: true
     },
+    tryTo: {
+      enabled: true
+    },
+    retryTo: {
+      enabled: true
+    },
+    eachElement: {
+      enabled: true
+    },
+    pauseOnFail: {}
   },
+  stepTimeout: 0,
+  stepTimeoutOverride: [{
+      pattern: 'wait.*',
+      timeout: 0
+    },
+    {
+      pattern: 'amOnPage',
+      timeout: 0
+    }
+  ],
+  name: 'qazando-automation',
+  // tests: './step_definitions/*_test.js',
+  translation: 'pt-BR'
 }
