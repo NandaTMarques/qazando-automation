@@ -5,6 +5,7 @@ Funcionalidade: Login
   Gostaria de fazer o Login na aplicação
   Para acessar o sistema
 
+  @Login
   Cenario: Login com sucesso
     Dado que o usuário esteja na tela de login
     Quando ele preenche os campos de e-mail e senha com credenciais validas

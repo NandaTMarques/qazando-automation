@@ -1,5 +1,5 @@
 const { I } = inject();
-
+// const LoginAction = require('../page_definitions/page_actions/LoginAction.js');
 
 Given('que o usuário esteja na tela de login', () => {
   I.seeElement('~email');
@@ -20,6 +20,22 @@ Then('ele acessará a home do sistema', () => {
   I.seeElement('~salvar');
   I.wait(2); // não é necessário, só coloquei para podermos ver o final do teste com calma
 });
+
+// Given('que o usuário esteja na tela de login', async () => {
+//   await LoginAction.seeLoginPage();
+// });
+
+// When('ele preenche os campos de e-mail e senha com credenciais validas', async () => {
+//   await LoginAction.fillLogin();
+// });
+
+// When('aciona a opção para logar', async () => {
+//   await LoginAction.enterLogin();
+// });
+
+// Then('ele acessará a home do sistema', async () => {
+//   await LoginAction.seeHome();
+// });
 
 
 Given(/^que o usuário esteja na tela de login$/, () => {
