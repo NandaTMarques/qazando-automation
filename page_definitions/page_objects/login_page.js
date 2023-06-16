@@ -3,16 +3,16 @@ const { I } = inject();
 module.exports = {
 
   fields: {
-    email: 'email',
+    email: '~email',
     password: 'senha'
   },
 
   buttons: {
-    enter: 'entrar'
+    enter: '~entrar'
   },
 
   messages: {
-    loginFail: 'lognFail',
+    loginFail: '~lognFail',
   },
 
 }
