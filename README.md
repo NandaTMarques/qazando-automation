@@ -46,7 +46,15 @@ Para executar os testes rode o comando `npm run android --verbose`.
 
 Caso prefira testar somente uma tag você pode executar o teste da seguinte forma: `npm run android -- --grep "@ErroNoLogin" ` (nesse caso testa apenas os testes com a tag @ErrorNoLogin serão executados).
 
+Para rodar os testes no device físico execute o comando `npm run androidDeviceReal` ou `npm run androidDeviceReal -- --grep "@TalkTest"` para rodar o teste com as tags.
+
 Para executar os testes e gerar um relatório rode o comando `npm run report`.
+
+### Executando testes no iOS
+
+Para executar os testes rode o comando `npm run ios --verbose`.
+
+Caso prefira testar somente uma tag você pode executar o teste da seguinte forma: `npm run ios -- --grep "@ErroNoLogin" ` (nesse caso testa apenas os testes com a tag @ErrorNoLogin serão executados).
 
 ---
 
