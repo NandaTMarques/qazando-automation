@@ -7,7 +7,7 @@
     "test": "npx codeceptjs run --steps",
     "ios": "PLATFORM=iOS APP='/Users/fernandatmarques/qazando-automation/app/qazandoapp.app' DEVICE=iPhone 14 VERSION=16.4 npx codeceptjs run --steps",
     "android": "PLATFORM=Android APP='/Users/fernandatmarques/qazando-automation/app/app-release.apk' DEVICE=Projeto_automation VERSION=10.0 PACKAGE=com.qazandoapp ACTIVITY=MainActivity npx codeceptjs run --steps",
-    "androidDeviceReal": "PLATFORM=Android APP='/Users/fernandatmarques/qazando-automation/app/app-release.apk' DEVICE=RX8T309L21D VERSION=13.0 PACKAGE=com.qazandoapp ACTIVITY=MainActivity automationName=Espresso npx codeceptjs run --steps",
+    "androidDeviceReal": "PLATFORM=Android APP='/Users/fernandatmarques/qazando-automation/app/app-release.apk' DEVICE=RX8T309L21D VERSION=13.0 PACKAGE=com.qazandoapp ACTIVITY=MainActivity automationName=UiAutomator2 npx codeceptjs run --steps",
     "codeceptjs": "codeceptjs run --steps",
     "report": "codeceptjs run --reporter mochawesome",
     "automationRun": "npm run android -- --grep 'Cadastro1'"

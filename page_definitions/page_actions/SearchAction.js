@@ -7,19 +7,18 @@ module.exports = {
 
     async searchStudent () {
         await I.wait(2);
-        // await I.fillField('~search', 'Clarise');
-        await I.fillField('~search', 'Lucas');
+        await I.fillField('~search', 'Clarise');
+        // await I.fillField('~search', 'Lucas');
     },
 
     async seeStudent () {
         await I.wait(2);
-        //await I.seeElement('~66525');
-        await I.seeElement('~55522');
+        await I.seeElement('~66525');
+        // await I.seeElement('~55522');
         await I.wait(2);
     }, 
 
     async slideScreen () {
-        // await I.swipeUp();
         I.touchPerform([
             {
                 action: 'longPress',

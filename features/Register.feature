@@ -9,14 +9,14 @@ Funcionalidade: Cadastro de Aluno
         Dado que o usuário esteja logado na aplicação
         E ele esteja na Home Page do sistema
     
-    @SuccessRegistration
+    @SuccessRegistration @TalkTests
     Cenario: Cadastro com sucesso
         Quando ele preenche o campo de código
         E preenche o campo de aluno
         E aciona a opção salvar
         Então ele criará o cadastro do aluno com sucesso
 
-    @RegistrationError
+    @RegistrationError @TalkTests
     Cenario: Cadastro deixando o código do aluno sem preencher
         Quando ele preenche o campo de código
         E não preenche o campo de aluno

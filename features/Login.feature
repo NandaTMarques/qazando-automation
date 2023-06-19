@@ -5,7 +5,7 @@ Funcionalidade: Login
   Gostaria de fazer o Login na aplicação
   Para acessar o sistema
 
-  @Login
+  @Login @TalkTests
   Cenario: Login com sucesso
     Dado que o usuário esteja na tela de login
     Quando ele preenche os campos de e-mail e senha com credenciais validas
@@ -13,14 +13,14 @@ Funcionalidade: Login
     Então ele acessará a home do sistema
 
   @ErroNoLogin
-  Cenario: Login com com email errado
+  Cenario: Tentar fazer o login com email errado
     Dado que o usuário esteja na tela de login
     Quando ele preenche os campos de e-mail inválido e senha valida
     E aciona a opção para logar
     Então ele verá uma mensagem de erro no login
-
-  @ErroNoLogin
-  Cenario: Login com com senha errada
+  
+  @ErroNoLogin @TalkTests
+  Cenario: Tentar fazer Login com com senha errada
     Dado que o usuário esteja na tela de login
     Quando ele preenche os campos de e-mail válido e senha inválida
     E aciona a opção para logar

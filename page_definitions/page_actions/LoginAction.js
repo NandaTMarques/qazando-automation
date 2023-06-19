@@ -5,6 +5,8 @@ const HomePage = require('../page_objects/home_page.js');
 module.exports = {
 
     async seeLoginPage () {
+        // const email = await I.findById(LoginPage.fields.email);
+        // I.seeElement(email);
         I.seeElement('~email');
     },
 
