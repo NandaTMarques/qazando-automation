@@ -39,9 +39,6 @@ exports.config = {
   },
   include: {
     I: './steps_file.js',
-    // login_page: './pages/login_page.js',
-    // home_page: './pages/home_page.js',
-    // register_page: './pages/register_page.js'
   },
   mocha: {},
   bootstrap: null,
@@ -51,8 +48,8 @@ exports.config = {
   hooks: [],
   gherkin: {
     translation: 'pt-BR',
-    features: './features/*.feature',
-    steps: ['./step_definitions/Login.js', './step_definitions/RegisterStudent.js']
+    features: './features/**/*.feature',
+    steps: './step_definitions/**/*.steps.js' // coloco .steps em todos os steps, assim não preciso acrescentar eles aqui toda vez
   },
   plugins: {
     screenshotOnFail: {
