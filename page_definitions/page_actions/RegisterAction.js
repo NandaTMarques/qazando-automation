@@ -5,57 +5,57 @@ const { I } = inject();
 
 module.exports = {
 
-    async seeHomeRegister () {
-        await I.wait(1);
-        await I.seeElement('~salvar');
+    seeHomeRegister () {
+        I.wait(1);
+        I.seeElement('~salvar');
     },
 
-    async fillCode () {
-        await I.fillField('~codigo', '06117');
-        // const code = await I.findById(RegisterStudent.fields.code);
+    fillCode () {
+        I.fillField('~codigo', '06117');
+        // const code = I.findById(RegisterStudent.fields.code);
         // I.fillField(code, '0617');
         
     },
 
-    async fillStudent () {
-        await I.fillField('~aluno', 'Fernanda Teixeira');
+    fillStudent () {
+        I.fillField('~aluno', 'Fernanda Teixeira');
     },
 
-    async saveStudent () {
-        await I.wait(2);
-        await I.seeElement('~salvar');
-        await I.tap('~salvar');
+    saveStudent () {
+        I.wait(2);
+        I.seeElement('~salvar');
+        I.tap('~salvar');
     },
 
-    async searchStudent () {
-        await I.fillField('~search', 'Fernanda Teixeira');
-        await I.wait(3);
-        await I.seeElement('//android.view.ViewGroup[@content-desc="06117"]');
+    searchStudent () {
+        I.fillField('~search', 'Fernanda Teixeira');
+        I.wait(3);
+        I.seeElement('//android.view.ViewGroup[@content-desc="06117"]');
     },
 
-    async NotFillStudent () {
-        await I.fillField('~aluno', '');
+    NotFillStudent () {
+        I.fillField('~aluno', '');
     },
 
-    async NotFillCode () {
-        await I.fillField('~codigo', '');
+    NotFillCode () {
+        I.fillField('~codigo', '');
     },
 
-    async ErrorNotification () {
-        await I.wait(2);
-        await I.seeElement('Os campos devem ser preenchidos!');
+    ErrorNotification () {
+        I.wait(2);
+        I.seeElement('Os campos devem ser preenchidos!');
     },
 
-    async cancelStudent () {
-        await I.wait(2);
-        await I.seeElement('~cancelar');
-        await I.tap('~cancelar');
+    cancelStudent () {
+        I.wait(2);
+        I.seeElement('~cancelar');
+        I.tap('~cancelar');
     },
 
-    async emptyCodeField () {
-        await I.wait(2);
-        await I.seeElement('~codigo', '');
-        await I.wait(2);
+    emptyCodeField () {
+        I.wait(2);
+        I.seeElement('~codigo', '');
+        I.wait(2);
     },
 
 }

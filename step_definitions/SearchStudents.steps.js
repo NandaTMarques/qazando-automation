@@ -18,7 +18,7 @@ Then(/^ele preenche o campo de busca$/, async () => {
 	await SearchAction.searchStudent();
 });
 
-When(/^ele verá o cadastro do aluno com sucesso$/, async () => {
+When(/^ele verá o cadastro do aluno buscado$/, async () => {
 	await SearchAction.seeStudent();
 });
 

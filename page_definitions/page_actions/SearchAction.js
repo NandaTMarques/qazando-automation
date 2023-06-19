@@ -9,6 +9,7 @@ module.exports = {
         await I.wait(2);
         await I.fillField('~search', 'Clarise');
         // await I.fillField('~search', 'Lucas');
+        await I.wait(2);
     },
 
     async seeStudent () {
@@ -33,7 +34,7 @@ module.exports = {
     },
 
     async searchStudentAfterScroll () {
-        await I.waitForVisible('~5952');
+        await I.waitForVisible('~5952', 2);
         await I.wait(3);
     }
 

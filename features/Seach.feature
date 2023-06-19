@@ -12,7 +12,7 @@ Funcionalidade: Buscar Aluno
     @SuccessSearch @TalkTests
     Cenario: Busca de aluno com sucesso
         Quando ele preenche o campo de busca
-        Então ele verá o cadastro do aluno com sucesso
+        Então ele verá o cadastro do aluno buscado
 
     @swipe @TalkTests
     Cenario: Busca de aluno deslizando a tela
