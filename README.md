@@ -1,4 +1,4 @@
-# codeceptjs-mobile - qazando-automation
+# Codeceptjs-mobile - qazando-automation
 
 Projeto de automação de testes Mobile utilizando o CodeceptJS
 
