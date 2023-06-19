@@ -55,6 +55,7 @@ module.exports = {
     async emptyCodeField () {
         await I.wait(2);
         await I.seeElement('~codigo', '');
+        await I.wait(2);
     },
 
 }
