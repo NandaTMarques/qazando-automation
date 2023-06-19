@@ -26,7 +26,7 @@ module.exports = {
 
     async fillLoginErrorEmail() {
         I.fillField('~email', 'teste@teste.com.br');
-        I.fillField('~senha', '123456');
+        I.fillField('~senha', secret('123456'));
     },
 
     async fillLoginErrorSenha() {
