@@ -3,16 +3,21 @@ const { I } = inject();
 module.exports = {
 
     fields: {
-        code: '~codigo',
-        student: '~aluno'
+        codeField: '~codigo',
+        code: '06117',
+        studentField: '~aluno',
+        student: 'Fernanda Teixeira',
+        searchStudent: '~search',
+        studentFound: '//android.view.ViewGroup[@content-desc="06117"]'
     },
 
     buttons: {
-        saveStudent: '~salvar'
+        saveStudent: '~salvar',
+        cancelButton: '~cancelar'
     },
 
     messages: {
-        loginFail: 'lognFail',
+        msgRegisterFail: 'Os campos devem ser preenchidos!',
     },
 
 }

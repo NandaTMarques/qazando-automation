@@ -1,60 +1,74 @@
 const { I } = inject();
-// const LoginPage = require('../page_objects/login_page.js');
-// const HomePage = require('../page_objects/home_page.js');
-// const RegisterStudent = require('../page_objects/register_page.js');
+const LoginPage = require('../page_objects/login_page.js');
+const HomePage = require('../page_objects/home_page.js');
+const RegisterStudent = require('../page_objects/register_page.js');
 
 module.exports = {
 
     seeHomeRegister () {
+        const saveButton = HomePage.buttons.saveStutent;
         I.wait(1);
-        I.seeElement('~salvar');
+        I.seeElement(saveButton);
     },
 
     fillCode () {
-        I.fillField('~codigo', '06117');
-        // const code = I.findById(RegisterStudent.fields.code);
-        // I.fillField(code, '0617');
-        
+        const codeField = RegisterStudent.fields.codeField;
+        const code = RegisterStudent.fields.code;
+        I.fillField(codeField, code);
     },
 
     fillStudent () {
-        I.fillField('~aluno', 'Fernanda Teixeira');
+        const studentField = RegisterStudent.fields.studentField;
+        const student = RegisterStudent.fields.student;
+        I.fillField(studentField, student);
     },
 
     saveStudent () {
+        const saveButton = HomePage.buttons.saveStutent;
         I.wait(2);
-        I.seeElement('~salvar');
-        I.tap('~salvar');
+        I.seeElement(saveButton);
+        I.tap(saveButton);
+        I.wait(2);
     },
 
     searchStudent () {
-        I.fillField('~search', 'Fernanda Teixeira');
+        const searchStudent = RegisterStudent.fields.searchStudent;
+        const student = RegisterStudent.fields.student;
+        const studentFound = RegisterStudent.fields.studentFound;
+        I.fillField(searchStudent, student);
         I.wait(3);
-        I.seeElement('//android.view.ViewGroup[@content-desc="06117"]');
+        I.seeElement(studentFound);
+        I.wait(2);// não é necessário, só coloquei para podermos ver o final do teste com calma
     },
 
     NotFillStudent () {
-        I.fillField('~aluno', '');
+        const studentField = RegisterStudent.fields.studentField;
+        I.fillField(studentField, '');
     },
 
     NotFillCode () {
-        I.fillField('~codigo', '');
+        const codeField = RegisterStudent.fields.codeField;
+        I.fillField(codeField, '');
     },
 
     ErrorNotification () {
+        const msgRegisterFail = RegisterStudent.messages.msgRegisterFail;
         I.wait(2);
-        I.seeElement('Os campos devem ser preenchidos!');
+        I.seeElement(msgRegisterFail);
+        I.wait(2);// não é necessário, só coloquei para podermos ver o final do teste com calma
     },
 
     cancelStudent () {
+        const cancelButton = RegisterStudent.buttons.cancelButton;
         I.wait(2);
-        I.seeElement('~cancelar');
-        I.tap('~cancelar');
+        I.seeElement(cancelButton);
+        I.tap(cancelButton);
     },
 
     emptyCodeField () {
+        const codeField = RegisterStudent.fields.codeField;
         I.wait(2);
-        I.seeElement('~codigo', '');
+        I.seeElement(codeField, '');
         I.wait(2);
     },
 

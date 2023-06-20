@@ -24,6 +24,15 @@ exports.config = {
       // app: '/Users/fernandatmarques/qazando-automation/app/app-release.apk',
       // platform: 'Android',
       // desiredCapabilities: {
+      //   deviceName: 'RX8T309L21D',
+      //   platformVersion: '13.0',
+      //   appPackage: 'com.qazandoapp',
+      //   appActivity: 'MainActivity',
+      //   automationName: 'UiAutomator2'
+
+      // app: '/Users/fernandatmarques/qazando-automation/app/app-release.apk',
+      // platform: 'Android',
+      // desiredCapabilities: {
       //   deviceName: 'Projeto_automation',
       //   platformVersion: '10.0',
       //   appPackage: 'com.qazandoapp',

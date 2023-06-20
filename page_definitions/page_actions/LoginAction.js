@@ -5,40 +5,54 @@ const HomePage = require('../page_objects/home_page.js');
 module.exports = {
 
     seeLoginPage () {
-        // const email = await I.findById(LoginPage.fields.email);
-        // I.seeElement(email);
-        I.seeElement('~email');
+        const email = LoginPage.fields.email;
+        I.seeElement(email);
     },
 
     fillLogin () {
-        I.fillField('~email', 'teste@teste.com');
-        I.fillField('~senha', '123456');
+        const emailField = LoginPage.fields.email;
+        const passwordField = LoginPage.fields.password;
+        const email = LoginPage.fields.emailLogin;
+        const password = LoginPage.fields.passwordLogin
+        I.fillField(emailField, email);
+        I.fillField(passwordField, password);
     },
 
     enterLogin () {
-        I.tap('~entrar');
+        const toEnter = LoginPage.buttons.enter;
+        I.tap(toEnter);
     },
 
     seeHome () {
+        const saveButton = HomePage.buttons.saveStutent;
         I.wait(3);
-        I.waitForElement('~salvar', 5);
-        I.seeElement('~salvar');
+        I.waitForElement(saveButton, 5);
+        I.seeElement(saveButton);
         I.wait(2); // não é necessário, só coloquei para podermos ver o final do teste com calma
     },
 
     fillLoginErrorEmail() {
-        I.fillField('~email', 'teste@teste.com.br');
-        I.fillField('~senha', secret('123456'));
+        const emailField = LoginPage.fields.email;
+        const passwordField = LoginPage.fields.password;
+        const wrongEmail = LoginPage.fields.wrongEmail;
+        const password = LoginPage.fields.passwordLogin
+        I.fillField(emailField, wrongEmail);
+        I.fillField(passwordField, secret(password));
     },
 
     fillLoginErrorSenha() {
-        I.fillField('~email', 'teste@teste.com');
-        I.fillField('~senha', '123457');
+        const emailField = LoginPage.fields.email;
+        const passwordField = LoginPage.fields.password;
+        const email = LoginPage.fields.emailLogin;
+        const wrongPassword = LoginPage.fields.wrongPassword;
+        I.fillField(emailField, email);
+        I.fillField(passwordField, wrongPassword);
     },
 
     messageLoginFailed () {
-        I.waitForElement('~lognFail', 5);
-        I.seeElement('~lognFail');
+        const loginFail = LoginPage.messages.loginFail;
+        I.waitForElement(loginFail, 5);
+        I.seeElement(loginFail);
         I.wait(2); // não é necessário, só coloquei para podermos ver o final do teste com calma
     },
 
