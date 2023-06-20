@@ -10,7 +10,7 @@
     "androidDeviceReal": "PLATFORM=Android APP='/Users/fernandatmarques/qazando-automation/app/app-release.apk' DEVICE=RX8T309L21D VERSION=13.0 PACKAGE=com.qazandoapp ACTIVITY=MainActivity automationName=UiAutomator2 npx codeceptjs run --steps",
     "codeceptjs": "codeceptjs run --steps",
     "report": "codeceptjs run --reporter mochawesome",
-    "automationRun": "npm run android -- --grep 'Cadastro1'"
+    "automationDebug": "npm run android -- --grep 'Cadastro1'"
   },
   "author": "Fernanda Teixeira Marques",
   "license": "ISC",
