@@ -14,6 +14,7 @@ module.exports = {
         const passwordField = LoginPage.fields.password;
         const email = LoginPage.fields.emailLogin;
         const password = LoginPage.fields.passwordLogin
+        // pause();
         I.fillField(emailField, email);
         I.fillField(passwordField, password);
     },

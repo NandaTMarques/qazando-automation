@@ -8,7 +8,7 @@ module.exports = {
         studentField: '~aluno',
         student: 'Fernanda Teixeira',
         searchStudent: '~search',
-        studentFound: '//android.view.ViewGroup[@content-desc="06117"]'
+        studentFound: '//android.view.ViewGroup[@content-desc="06117"]'// xpath
     },
 
     buttons: {
