@@ -38,7 +38,8 @@ Appium Inspector (last version) [download](https://github.com/appium/appium-insp
 ### Pré requisitos
 
 1. Appium estar executando
-2. Ter um emulador de pé ou um celular para desenvolvimento conectado via USB
+2. Cofigurar as capabilites no arquivo coddecept.conf.js
+3. Ter um emulador de pé ou um celular para desenvolvimento conectado via USB
 
 ### Executando testes no Android
 
