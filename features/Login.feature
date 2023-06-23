@@ -1,11 +1,11 @@
 #language: pt
-
+@Login
 Funcionalidade: Login
   Eu como usuario
   Gostaria de fazer o Login na aplicação
   Para acessar o sistema
 
-  @Login @TalkTests
+  @LoginSuccess @TalkTests
   Cenario: Login com sucesso
     Dado que o usuário esteja na tela de login
     Quando ele preenche os campos de e-mail e senha com credenciais validas

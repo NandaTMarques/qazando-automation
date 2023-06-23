@@ -7,5 +7,8 @@ module.exports = {
         wantedStudentCode: '~66525',
         student: '~5952'
     },
+    text: {
+        wantedStudent: 'Clarise',
+    }
 
 }

@@ -3,10 +3,12 @@ const { I } = inject();
 module.exports = {
 
   fields: {
-    email: '~email', // accessibility
-    password: 'Senha', //text
-    emailLogin: 'teste@teste.com',
-    passwordLogin: '123456',
+    emailField: '~email', // accessibility
+    passwordField: 'Senha', //text
+  },
+  text: {
+    email: 'teste@teste.com',
+    password: '123456',
     wrongEmail: 'teste@teste.com.br',
     wrongPassword: '123457'
   },

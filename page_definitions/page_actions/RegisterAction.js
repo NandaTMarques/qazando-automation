@@ -13,13 +13,13 @@ module.exports = {
 
     fillCode () {
         const codeField = RegisterStudent.fields.codeField;
-        const code = RegisterStudent.fields.code;
+        const code = RegisterStudent.text.code;
         I.fillField(codeField, code);
     },
 
     fillStudent () {
         const studentField = RegisterStudent.fields.studentField;
-        const student = RegisterStudent.fields.student;
+        const student = RegisterStudent.text.student;
         I.fillField(studentField, student);
     },
 
@@ -33,7 +33,7 @@ module.exports = {
 
     searchStudent () {
         const searchStudent = RegisterStudent.fields.searchStudent;
-        const student = RegisterStudent.fields.student;
+        const student = RegisterStudent.text.student;
         const studentFound = RegisterStudent.fields.studentFound;
         I.fillField(searchStudent, student);
         I.wait(3);
@@ -54,7 +54,7 @@ module.exports = {
     ErrorNotification () {
         const msgRegisterFail = RegisterStudent.messages.msgRegisterFail;
         I.wait(2);
-        I.seeElement(msgRegisterFail);
+        I.see(msgRegisterFail);
         I.wait(2);// não é necessário, só coloquei para podermos ver o final do teste com calma
     },
 

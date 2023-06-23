@@ -6,7 +6,7 @@ module.exports = {
 
     async searchStudent () {
         const searchField = RegisterStudent.fields.searchStudent;
-        const wantedStudent = SearchStudent.fields.wantedStudent;
+        const wantedStudent = SearchStudent.text.wantedStudent;
         await I.wait(2);
         await I.fillField(searchField, wantedStudent);
         await I.wait(2);
